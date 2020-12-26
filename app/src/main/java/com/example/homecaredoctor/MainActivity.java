@@ -6,10 +6,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
     final Fragment currentTreatment = new CurrentTreatment();
@@ -26,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Set listener for navigation items
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        adjustGravity(navView);
+        adjustWidth(navView);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,5 +54,37 @@ public class MainActivity extends AppCompatActivity {
         // Add all fragments but show only maps fragment
         fm.beginTransaction().add(R.id.nav_host_fragment, currentTreatment, "1").commit();
         fm.beginTransaction().add(R.id.nav_host_fragment, treatmentHistory, "2").hide(treatmentHistory).commit();
+    }
+
+    private static void adjustGravity(View v) {
+            ViewGroup parent = (ViewGroup) v.getParent();
+            parent.setPadding(0, 0, 0, 0);
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) parent.getLayoutParams();
+            params.gravity = Gravity.CENTER;
+            parent.setLayoutParams(params);
+        if (v instanceof ViewGroup) {
+            ViewGroup vg = (ViewGroup) v;
+            for (int i = 0; i < vg.getChildCount(); i++) {
+                adjustGravity(vg.getChildAt(i));
+            }
+        }
+    }
+
+    private static void adjustWidth(BottomNavigationView nav) {
+        try {
+            Field menuViewField = nav.getClass().getDeclaredField("mMenuView");
+            menuViewField.setAccessible(true);
+            Object menuView = menuViewField.get(nav);
+
+            Field itemWidth = menuView.getClass().getDeclaredField("mActiveItemMaxWidth");
+            itemWidth.setAccessible(true);
+            itemWidth.setInt(menuView, Integer.MAX_VALUE);
+        }
+        catch (NoSuchFieldException e) {
+            // TODO
+        }
+        catch (IllegalAccessException e) {
+            // TODO
+        }
     }
 }

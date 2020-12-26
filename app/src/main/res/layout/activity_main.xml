@@ -26,13 +26,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:fontFamily="serif-monospace"
             android:text="Bs. Vũ Thị Tuệ Khanh"
             android:textAlignment="center"
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:layout_marginTop="8dp"
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
