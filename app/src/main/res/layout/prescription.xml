@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/date"
+        android:layout_marginStart="18dp"
         android:textSize="16dp"
         android:text="26/12/2020"/>
     <androidx.recyclerview.widget.RecyclerView
@@ -15,4 +16,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/pill_list"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lời dặn:"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="18dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:id="@+id/note"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:text="Không ăn nếp, hạn chế ăn hải sản. Uống nhiều nước."/>
 </LinearLayout>

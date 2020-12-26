@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Set listener for navigation items
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        adjustGravity(navView);
-        adjustWidth(navView);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -56,35 +54,4 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.nav_host_fragment, treatmentHistory, "2").hide(treatmentHistory).commit();
     }
 
-    private static void adjustGravity(View v) {
-            ViewGroup parent = (ViewGroup) v.getParent();
-            parent.setPadding(0, 0, 0, 0);
-            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) parent.getLayoutParams();
-            params.gravity = Gravity.CENTER;
-            parent.setLayoutParams(params);
-        if (v instanceof ViewGroup) {
-            ViewGroup vg = (ViewGroup) v;
-            for (int i = 0; i < vg.getChildCount(); i++) {
-                adjustGravity(vg.getChildAt(i));
-            }
-        }
-    }
-
-    private static void adjustWidth(BottomNavigationView nav) {
-        try {
-            Field menuViewField = nav.getClass().getDeclaredField("mMenuView");
-            menuViewField.setAccessible(true);
-            Object menuView = menuViewField.get(nav);
-
-            Field itemWidth = menuView.getClass().getDeclaredField("mActiveItemMaxWidth");
-            itemWidth.setAccessible(true);
-            itemWidth.setInt(menuView, Integer.MAX_VALUE);
-        }
-        catch (NoSuchFieldException e) {
-            // TODO
-        }
-        catch (IllegalAccessException e) {
-            // TODO
-        }
-    }
 }

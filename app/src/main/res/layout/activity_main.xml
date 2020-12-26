@@ -41,16 +41,17 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue"
-        android:foregroundGravity="bottom"
+        android:background="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemTextColor="#ffffff"
-        app:itemIconSize="20dp"
+        app:itemTextColor="@color/blue"
+        app:itemIconSize="40dp"
+        app:elevation="1dp"
+        app:itemIconTint="@color/blue"
         app:menu="@menu/bottom_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/treatment"
+        android:icon="@drawable/treatment_icon"
         android:title="Đơn khám"/>
     <item
         android:id="@+id/history"
+        android:icon="@drawable/history_icon"
         android:title="Lịch sử"/>
 
 </menu>
