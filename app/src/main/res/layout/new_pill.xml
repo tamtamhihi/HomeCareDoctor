@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pill_field"
+        android:layout_alignEnd="@id/add_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/pill_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/googlesans"
+            android:hint="Tên thuốc" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <CheckBox
+            android:id="@+id/morning"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/googlesans"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="Sáng" />
+        <CheckBox
+            android:id="@+id/afternoon"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/googlesans"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="Trưa" />
+        <CheckBox
+            android:id="@+id/evening"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/googlesans"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:text="Chiều" />
+    </LinearLayout>
+</LinearLayout>

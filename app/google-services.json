@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "433650606961",
+    "project_id": "homecare-9d58b",
+    "storage_bucket": "homecare-9d58b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433650606961:android:4602f98efe8bbe60ceccd0",
+        "android_client_info": {
+          "package_name": "com.example.homecaredoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433650606961-qqni4m4v9l5mi2hrd31jt6frim1detv0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homecaredoctor",
+            "certificate_hash": "9e7a6796dcae392ee144054becd01ac36a699bc1"
+          }
+        },
+        {
+          "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Zo_N4gNl9qVY015izqsfnmC_im7H4x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433650606961:android:51b1c94e6f12886ececcd0",
+        "android_client_info": {
+          "package_name": "com.example.homecareproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433650606961-jnv6t0ifigb83ff5loirqum3aofpl1pt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homecareproject",
+            "certificate_hash": "9e7a6796dcae392ee144054becd01ac36a699bc1"
+          }
+        },
+        {
+          "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Zo_N4gNl9qVY015izqsfnmC_im7H4x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433650606961:android:104c2a72d8fd1cd1ceccd0",
+        "android_client_info": {
+          "package_name": "om.example.homecaredoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Zo_N4gNl9qVY015izqsfnmC_im7H4x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433650606961-b45obfvjl4ou2nsacegp54tfj5tvmcs2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

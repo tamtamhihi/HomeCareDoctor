@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/googlesans</item>
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+    <style name="BottomNav" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/googlesans</item>
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+    <style name="activeNav">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

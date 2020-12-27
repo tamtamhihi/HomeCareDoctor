@@ -10,12 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder> {
     private Context context;
-    private ArrayList<Pill> pillList;
+    private List<Pill> pillList;
 
-    public PillAdapter(Context context, ArrayList<Pill> pillList) {
+    public PillAdapter(Context context, List<Pill> pillList) {
         this.context = context;
         this.pillList = pillList;
     }
@@ -30,7 +31,11 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.PillViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull PillAdapter.PillViewHolder holder, int position) {
-        holder.name.setText(pillList.get(position).getPillName());
+        String n = pillList.get(position).pillName;
+        if (n == null || n.isEmpty())
+            holder.name.setText(pillList.get(position).getPillName());
+        else
+            holder.name.setText(n);
         Pill bindedPill = pillList.get(position);
         String name = bindedPill.getPillName();
         String description = bindedPill.toString();

@@ -16,7 +16,8 @@
         android:layout_gravity="center"
         android:text="1"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:fontFamily="@font/googlesans"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +27,8 @@
             android:id="@+id/pill_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:fontFamily="@font/googlesans"
+            android:textSize="18dp"
             android:textColor="#000000"
             android:textStyle="bold"
             android:text="Fluoxetin (hydroclorid)"
@@ -39,9 +41,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/description"
             android:text="1 viên buổi sáng   1 viên buổi tối"
+            android:fontFamily="@font/googlesans"
             app:layout_constraintLeft_toRightOf="@id/stt"
             android:layout_marginLeft="18dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="3dp"
             app:layout_constraintTop_toBottomOf="@id/pill_name"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

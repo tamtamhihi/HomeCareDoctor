@@ -35,7 +35,7 @@ public class PrescriptionAdapter extends RecyclerView.Adapter<PrescriptionAdapte
         holder.pillAdapter = new PillAdapter(context, bindedPrescription.getPillList());
         holder.pillList.setAdapter(holder.pillAdapter);
         holder.pillList.setLayoutManager(new LinearLayoutManager(context));
-        holder.date.setText(bindedPrescription.getDate());
+        holder.date.setText(bindedPrescription.getStartDate());
     }
 
     @Override
